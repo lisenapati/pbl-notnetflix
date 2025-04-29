@@ -1,5 +1,5 @@
 <template>
-  <router-view />
+    <router-view />
 </template>
 
 <script>
@@ -9,10 +9,9 @@ export default {
 </script>
 
 <style>
-/* Global CSS bisa ditaruh di sini atau gunakan Tailwind/postcss jika pakai */
 body {
   margin: 0;
-  font-family: 'Poppins', Helvetica;
+  font-family: 'Poppins', Helvetica, sans-serif;
   background-color: #000;
   color: #fff;
 }
