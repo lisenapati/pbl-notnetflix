@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  base: '/notnetflix/',
+  base: '/pbl-notnetflix/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
