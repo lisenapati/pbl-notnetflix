@@ -88,7 +88,7 @@
 
   .main-title {
     position: absolute;
-    top: 15vh;
+    top: 5vh;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -158,7 +158,7 @@
 
   .btn-download {
     position: absolute;
-    top: 40%;
+    top: 33%;
     left: 50%;
     transform: translateX(-50%);
     background-color: #e50914;
@@ -250,12 +250,12 @@
   .ribbon-background {
     height: 4vh;
     width: 100vw;
-    top: 94%;
+    top: 120%;
   }
 
   .ribbon-text {
     font-size: 4vw;
-    top: 90%;
+    top: 120%;
   }
 }
 
