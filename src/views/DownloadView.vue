@@ -19,7 +19,7 @@
             <img src="@/assets/logo-windows.png" alt="Windows" class="os-icon" />
             <div class="os-name">Windows</div>
           </div>
-          <a href="installer/windows_netflix_installer.ps1" download="notnetflix-windows.exe" class="download-btn">Download</a>
+          <a href="installer/notnetflix-windows.exe" download="notnetflix-windows.exe" class="download-btn">Download</a>
         </div>
 
         <div class="card">
@@ -27,7 +27,7 @@
             <img src="@/assets/logo-linux.png" alt="Linux" class="os-icon" />
             <div class="os-name">Linux</div>
           </div>
-          <a href="installer/linux_netflix_installer.sh" download="notnetflix-linux" class="download-btn">Download</a>
+          <a href="installer/notnetflix-linux" download="notnetflix-linux" class="download-btn">Download</a>
         </div>
       </div>
 
