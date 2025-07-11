@@ -20,7 +20,7 @@
             <div class="os-name">Windows</div>
           </div>
           <a href="installer/notnetflix-windows.exe" download="notnetflix-windows.exe" class="download-btn">Download Executable</a>
-          <a href="installer/notnetflix-windows.ps1" download="notnetflix-windows.exe" class="download-btn">Download Script</a>
+          <a href="installer/notnetflix-windows.ps1" download="notnetflix-windows.ps1" class="download-btn">Download Script</a>
         </div>
 
         <div class="card">
@@ -29,7 +29,7 @@
             <div class="os-name">Linux</div>
           </div>
           <a href="installer/notnetflix-linux" download="notnetflix-linux" class="download-btn">Download Executable</a>
-          <a href="installer/notnetflix-linux.sh" download="notnetflix-linux" class="download-btn">Download Script</a>
+          <a href="installer/notnetflix-linux.sh" download="notnetflix-linux.sh" class="download-btn">Download Script</a>
         </div>
       </div>
 
